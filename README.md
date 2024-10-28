@@ -19,5 +19,5 @@ npx prisma migrate dev && npx prisma generate && npx prisma db seed
 ##### 4 - Executar a aplicação:
 
 ```bash
-pnpm run dev
+pnpm dev
 ```
