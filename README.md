@@ -1,7 +1,7 @@
 ##### 1 - Instalar as dependências do projeto:
 
 ```bash
-npm i
+pnpm i
 ```
 
 ##### 2 - Garantir que o docker esteja executando o nosso container do postgres:
@@ -19,5 +19,5 @@ npx prisma migrate dev && npx prisma generate && npx prisma db seed
 ##### 4 - Executar a aplicação:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
