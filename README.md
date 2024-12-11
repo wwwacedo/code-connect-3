@@ -27,3 +27,13 @@ pnpm dev
 ```bash
 pnpm i next-auth@4
 ```
+
+#### 6 - Instalar adptador para ligar o `Next-Auth`e o `prisma`:
+
+```bash
+pnpm i @auth/prisma-adapter
+```
+- `adaptador`: pega os dados do usuario autorizado com provider (Github/Google/etc) e cria uma instância no DB de usuário que nós esperamos pois, a partir disso, esse usuário terá ligações com posts e comentários
+
+
+
