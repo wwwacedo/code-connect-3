@@ -1,6 +1,7 @@
-import GithubProvider from "next-auth/providers/github";
-import { PrismaAdapter } from "@auth/prisma-adapter"
-import db from "../../../../../prisma/db";
+import GithubProvider from 'next-auth/providers/github';
+import { PrismaAdapter } from '@auth/prisma-adapter'
+import db from '../../../../../prisma/db';
+import Credentials from 'next-auth/providers/credentials';
 
 export const options = {
 	adapter: PrismaAdapter(db),
@@ -8,6 +9,20 @@ export const options = {
 		GithubProvider({
 			clientId: process.env.GITHUB_CLIENT_ID,
 			clientSecret: process.env.GITHUB_CLIENT_SECRET
+		}),
+		Credentials({
+			credentials: {
+				email: {
+					label: 'E-mail',
+					type: 'email',
+					placeholder: 'Digite seu e-mail'
+				},
+				password: {
+					label: 'Senha',
+					type: 'password',
+					placeholder: 'Digite sua senha'
+				}
+			}
 		})
 	],
 	callbacks: {
